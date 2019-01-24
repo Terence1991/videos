@@ -1,11 +1,15 @@
 import React from 'react'
 import SearchBar from './SearchBar.js'
-
+import youtube from '../apis/youtube.js';
 
 
 class App extends React.Component {
    onTextSubmit = (text) => {
-     console.log(text);
+     youtube.get('./search', {
+       params: {
+         q: text
+       }
+     })
    }
   render() {
     return ( 
