@@ -4,10 +4,13 @@ import SearchBar from './SearchBar.js'
 
 
 class App extends React.Component {
+   onTextSubmit = (text) => {
+     console.log(text);
+   }
   render() {
     return ( 
     <div className='ui container'> 
-      <SearchBar/>
+      <SearchBar onTextSubmit={this.onTextSubmit}/>
     </div>
     )
   }
