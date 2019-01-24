@@ -4,8 +4,8 @@ class SearchBar extends React.Component {
     
   state = {text: ''}
 
-  onInputChange = () => {
-    
+  onInputChange = (event) => {
+    this.setState({text: event.target.value})
   }
 
   render() {
