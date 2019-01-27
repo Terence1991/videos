@@ -1,10 +1,11 @@
 import React from 'react'
-import VideoItem from './videoitem'
 
-const VideoItem = () => {
+
+const VideoItem = ({video}) => {
 return (
   <div>
- videoitem
+<img alt='title' src={video.snippet.thumbnails.meduim.url}/>
+  {video.snippet.title}
   </div>
 )
 
@@ -12,3 +13,4 @@ return (
 
 
 export default VideoItem;
+ 
