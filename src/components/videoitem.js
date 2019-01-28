@@ -3,8 +3,8 @@ import React from 'react'
 
 const VideoItem = ({video}) => {
 return (
-  <div>
-<img alt='title' src={video.snippet.thumbnails.meduim.url}/>
+  <div className="item">
+<img alt='title' src={video.snippet.thumbnails.medium.url}/>
   {video.snippet.title}
   </div>
 )
