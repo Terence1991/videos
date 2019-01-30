@@ -7,6 +7,10 @@ import VideoDetail from './VideoDetail.js'
 class App extends React.Component {
     state = {videos: [], selectedVideos: null }
 
+   componentDidMount() {
+     this.onTextSubmit('buildings')
+   }
+
 
    onTextSubmit = async text => {
       const response = await youtube.get('./search', {
@@ -14,7 +18,10 @@ class App extends React.Component {
          q: text
        }
      });
-     this.setState({videos: response.data.items})
+     this.setState({
+       videos: response.data.items,
+       selectedVideos: response.data.items[0]
+      })
    };
 
    onVideoSelect = (video) => {
